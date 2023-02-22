@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.header{
+    background-color: rgb(175, 139, 175);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+}
+
+.header a{
+text-decoration: none;
+}
+.cart_no{
+    background-color: black;
+    color: #fff;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    margin: 2px;
+    padding: 2px 6px;
+}
+
+.redirtsingle{
+    text-decoration: none;
+    color: #000;
+}
+.header li{
+    list-style: none;
+    font-weight: bolder;
+
+}
+.btn{
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px 30px;
+    transition: all 0.3s ease-in;
+    
+}
+.btn:hover{
+    background-color: rgba(29, 30, 29, 0.484);
+    color: #fff;
+    border: 2px solid rgba(32, 37, 32, 0.646);
+    
+}
+.page{
+    display: flex;
+}
+
+.image{
+    margin: 100px 0 0 50px;
+}
+.image img{
+    width: 400px;
+   
+}
+.datile{
+    margin-top: 200px;
+    margin-left: 100px;
+    
+}
+.datial,h2,p,a{
+    margin: 60px 0;
+}
+.datile a{
+    padding: 10px 100px;
+
+}
+.header li a{
+    text-decoration: none;
+    font-size: larger;
+}
+
+.box {
+    display: flex;
+    height: 200px;
+    width: 100vw;
+    flex-wrap: wrap;
+    margin: 50px;
+
+    
+}
+
+.itembox{
+    margin: 30px 20px;
+    /* border: 2px solid red; */
+    width: 250px;
+}
+
+.itembox img {
+    height: 150px;
+
+
+}
+.itembox h3{
+    text-align: center;
+}
+.itembox p {
+    width: 150px;
+    height: 90px;
+    /* border: 2px solid blue; */
+    padding: 0 10px;
+}
+
+.itembox button{
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+}
+.Cart_Page{
+    display: flex;
+    padding: 7px;
+    gap: 20px;
+}
+.cartImage{
+    border: 1px solid rgba(0, 0, 0, 0.541);
+    width: 120px;
+    height: 140px;
+}
