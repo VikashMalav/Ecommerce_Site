@@ -37,8 +37,8 @@ function Home() {
                             {/* <h3>{item.category}</h3> */}
                             <p>{item.title}</p>
                         </Link>
-                        {(cart.includes(item.id)==true) ? <p>Added To Cart</p> :
-                            (<Link className='btn' to='product' onClick={(e) => handleclick( e,item.id)}>Add To Cart</Link>)
+                        {(cart.find(list=>list.id===item.id)!==undefined) ? <p>Added To Cart</p> :
+                            (<Link className='btn' to='product' onClick={(e) => handleclick( e,{id:item.id,image:item.image,price:item.price,title:item.title})}>Add To Cart</Link>)
                         }
                     </div>
                 )

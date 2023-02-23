@@ -30,9 +30,10 @@ useEffect(() => {
          <h2>{Shopsingledata.title}</h2>
          <p>{Shopsingledata.description}</p>
          {
-        (cart.includes(Shopsingledata.id))
+        (cart.find(item=>item.id===Shopsingledata.id)!==undefined)
         ?<p>Added to Cart</p> 
-        :<Link to='' onClick={(e)=>{handleclick(e,Shopsingledata.id)}} className='btn'  >Add To Cart</Link>
+        :<Link to='' onClick={(e)=>{handleclick(e,{id:Shopsingledata.id
+        ,image:Shopsingledata.image,price:Shopsingledata.price,title:Shopsingledata.title})}} className='btn'  >Add To Cart</Link>
         }
          </div>
     </div>

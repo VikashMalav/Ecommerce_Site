@@ -7,6 +7,7 @@
 
 .header{
     background-color: rgb(175, 139, 175);
+    width: 100vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -113,13 +114,19 @@ text-decoration: none;
     height: 50px;
     border-radius: 30px;
 }
-.Cart_Page{
-    display: flex;
-    padding: 7px;
-    gap: 20px;
+.cart_page{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    
+    grid-area: 1/2;
+    
+    
 }
+
+
 .cartImage{
     border: 1px solid rgba(0, 0, 0, 0.541);
     width: 120px;
     height: 140px;
+    
 }
