@@ -9,22 +9,22 @@ import { Link } from 'react-router-dom';
 function Home() {
     const { cart ,handleclick} = useContext(CartContext)
     const [Shopdata, Setdata] = useState([])
-    //    const [AddedtoCart, Setdatafanc] = useState([])
+    
+
+   
 
 
     useEffect(() => {
         axios.get('https://fakestoreapi.com/products/')
             .then((response) => {
                 Setdata(response.data)
-                console.log(response.data)
+                // console.log(response.data)
             })
 
 
     }, [])
 
-    useEffect(()=>{
-        localStorage.setItem('product',JSON.stringify(cart))
-    },[cart])
+   
    
   return (
         <div className='box'>

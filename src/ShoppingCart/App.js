@@ -1,4 +1,4 @@
-import React, { useState,createContext } from 'react'
+import React, { useState,createContext,useEffect } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Home'
 import Header from './Header'
@@ -14,7 +14,7 @@ export const CartContext=createContext({})
 
 function Main() {
   const[cart,setCart]=useState(
-    (localStorage.getItem('product')==null)?[]:JSON.parse(localStorage.getItem('product')))
+    (localStorage.getItem('product')===null)?[]:JSON.parse(localStorage.getItem('product')))
   
 
   function handleclick( e,id) {
@@ -25,7 +25,9 @@ function Main() {
 
 
 }
-
+useEffect(()=>{
+  localStorage.setItem('product',JSON.stringify(cart))
+},[cart])
 
   return (
   <CartContext.Provider value={{cart,setCart,handleclick}} >
