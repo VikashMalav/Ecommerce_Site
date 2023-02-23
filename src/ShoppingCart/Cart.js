@@ -37,7 +37,7 @@ function Cart() {
                 })
 
 
-                : <h1>Cart is Empty...</h1>
+                : <div className='empty_cart'><img src='empty cart.webp' alt='empty cart'></img></div>
 
 
             }

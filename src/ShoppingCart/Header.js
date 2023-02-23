@@ -7,8 +7,8 @@ function Header() {
     <div className='header'>
        <Link to='/' ><h1>Amazon</h1></Link>
        <li> <NavLink to={'/'}>Home</NavLink></li>
-        <li><NavLink to={'/home'}>About</NavLink></li>
-        <li><NavLink to={'/home'}>Contact Us</NavLink></li>
+        <li><NavLink to={'/about'}>About</NavLink></li>
+        <li><NavLink to={'/contact'}>Contact Us</NavLink></li>
         <li><NavLink to={'/cart'}>Cart{(cart.length!==0)?<span className='cart_no'>{cart.length}</span>:''}</NavLink></li>
     </div>
   )

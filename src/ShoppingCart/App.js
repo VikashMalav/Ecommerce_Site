@@ -2,9 +2,10 @@ import React, { useState,createContext,useEffect } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Home'
 import Header from './Header'
-import About from './Home'
+import About from './About'
 import Contect from './Home'
 import Cart from './Cart'
+import Contact from './Contact';
 import './Style.css'
 import Singlepage from './SinglePage';
 
@@ -39,6 +40,8 @@ useEffect(()=>{
                 <Route path='/products/:id' element={<Singlepage/>}></Route>
                 <Route path='/contect' element={<Contect />}></Route>
                 <Route path='/cart' element={<Cart />}></Route>
+                <Route path='/about' element={<About />}></Route>
+                <Route path='/contact' element={<Contact />}></Route>
                
 
             </Routes>
