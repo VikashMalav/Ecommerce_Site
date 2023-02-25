@@ -29,6 +29,7 @@ function Home() {
   return (
         <div className='box'>
             {Shopdata.map((item, index) => {
+                item.quantity=1
                 return (
                     <div className='itembox' key={index} >
                         <Link className='redirtsingle' to={`products/${item.id}`} >
@@ -38,7 +39,7 @@ function Home() {
                             <p>{item.title}</p>
                         </Link>
                         {(cart.find(list=>list.id===item.id)!==undefined) ? <p>Added To Cart</p> :
-                            (<Link className='btn' to='product' onClick={(e) => handleclick( e,{id:item.id,image:item.image,price:item.price,title:item.title})}>Add To Cart</Link>)
+                            (<Link className='btn' to='product' onClick={(e) => handleclick( e,{id:item.id,image:item.image,price:item.price,title:item.title,quantity:item.quantity})}>Add To Cart</Link>)
                         }
                     </div>
                 )
